@@ -1,0 +1,82 @@
+# Practical-2: Study and Learn List,Tuple,Set and Dictionary
+# ID-20CS083
+# Name - Jiya Shah
+
+
+## a. Write a Python program to add member(s) in a set and clear a set.
+
+#A new empty set
+student = set()
+print("\nAdd single element:")
+student.add("20CS083")
+print(student)
+print("\nAdd multiple items:")
+student.update(["20CS087", "20CS101"])
+print(student)
+
+student.clear()
+print("\nAfter using clear:")
+print(student)
+
+## b. Write a Python program to remove an item from a set if it is present in the set.
+
+#Create a new set
+A = set([0, 1, 2, 3, 4, 5])
+print("Original set elements:")
+print(A)
+print("\nRemove 4 from the said set:")
+A.discard(4)
+print(A)
+print("\nRemove 5 from the said set:")
+A.discard(5)
+print(A)
+
+## c. Write a Python program to create an intersection, Union, difference of sets.
+
+# sets are defined
+A = {0, 2, 4, 6, 8};
+B = {1, 2, 3, 4, 5};
+  
+# union
+print("Union :", A | B)
+  
+# intersection
+print("Intersection :", A & B)
+  
+# difference
+print("Difference :", A - B)
+ 
+
+## d. Write a Python program to find maximum and the minimum value in a set.
+
+#Create a set
+A = {0,4,2,100,-1,-6,2.3}
+print("Original set elements:")
+print(A)
+print("\nMaximum value of the said set:")
+print(max(A))
+print("\nMinimum value of the said set:")
+print(min(A))
+
+## e. Write a Python program to find the most common elements and their counts from list, tuple, dictionary.
+
+## List
+from collections import Counter
+s = [1,2,3,4,4,4]
+print(s)
+print("Most common element:")
+print(Counter(s).most_common(1))
+
+## Tuple
+A=(1,2,3,4,5,6,1,1,1)
+max=0
+for x in A:
+    count = A.count(x)
+    if(count > max):
+        max=count
+        num=x
+
+print("The number occuring the most is: ",num)        
+print("It occurs ",max,"times.")
+
+
